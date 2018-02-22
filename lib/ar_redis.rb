@@ -1,13 +1,17 @@
-require "ar_redis/railtie"
+require "ar_redis/base"
 
 module ArRedis
-  def self.redis
+  extend self
+
+  def redis
     return @redis if @redis
     self.redis = Redis.new
     self.redis
   end
 
-  def self.redis=(server)
+  def redis=(server)
     @redis = server
   end
 end
+
+binding.pry
