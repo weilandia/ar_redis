@@ -1,8 +1,5 @@
 require "active_record"
 
-AR_VERSION = Gem::Version.new(ActiveRecord::VERSION::STRING)
-AR_4_0 = Gem::Version.new("4.0")
-
 class CreateAllTables < ActiveRecord::Migration[5.0]
   def self.recreate_table(name, *args, &block)
     execute "drop table if exists #{name}"
