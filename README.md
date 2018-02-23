@@ -55,7 +55,26 @@ ArRedis.redis = $redis
 ```
 
 ## Contributing
-Contribution directions go here.
+
+Write some code!
+
+1. [Fork](https://help.github.com/articles/fork-a-repo) ArRedis
+2. Create a topic branch - `git checkout -b my_branch`
+3. Push to your branch - `git push origin my_branch`
+4. Create a [Pull Request](http://help.github.com/pull-requests/) from your
+   branch
+5. That's it!
+
+If you're not doing some sort of refactoring, a CHANGELOG entry is appropriate.
+Please include them in pull requests adding features or fixing bugs.
+
+Tests
+-----
+
+We use rspec for testing.
+
+A simple `bundle exec rspec` will run all the tests. Make sure they pass when
+you submit a pull request.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
