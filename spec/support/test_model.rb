@@ -20,10 +20,3 @@ CreateAllTables.up
 
 class TestModel < ActiveRecord::Base
 end
-
-RSpec.configure do |config|
-  config.before(:each) do
-    TestModel.delete_all
-    TestModel.redis.delete_all
-  end
-end

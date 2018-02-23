@@ -14,6 +14,8 @@ module ArRedis
   end
 
   def redis=(server)
-    @redis = server
+    if server.is_a?(Redis)
+      @redis = server
+    end
   end
 end

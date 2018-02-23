@@ -3,7 +3,7 @@ module ArRedis
     attr_reader :key, :redis_client
 
     def initialize(key)
-      @key = key.to_param
+      @key = key.to_s
       @redis_client = ArRedis.redis
     end
 
@@ -16,7 +16,7 @@ module ArRedis
     end
 
     def delete_all
-      keys = redis_client.keys("#{self}:*")
+      keys = redis_client.keys("#{self}*")
 
       unless keys.blank?
         redis_client.del(keys)

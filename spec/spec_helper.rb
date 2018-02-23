@@ -2,6 +2,12 @@ require "rspec"
 require "ar_redis"
 require_relative "support/test_model"
 
+RSpec.configure do |config|
+  config.before(:each) do
+    TestModel.delete_all
+  end
+end
+
 begin
   require "pry"
 rescue LoadError
