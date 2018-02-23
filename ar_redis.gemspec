@@ -1,17 +1,15 @@
 $:.push File.expand_path("lib", __dir__)
 
-# Maintain your gem's version:
 require "ar_redis/version"
 
-# Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   spec.name        = "ar_redis"
   spec.version     = ArRedis::VERSION
   spec.authors     = ["Nick Weiland"]
   spec.email       = ["nickweiland@gmail.com"]
   spec.homepage    = "https://github.com/weilandia/ar_redis"
-  spec.summary     = %q{Active Record keys for Redis.}
-  spec.description = %q{Adds out-of-the-box Redis nested namespaced keys for Active Record objects.}
+  spec.summary     = %q{ActiveRecord keys for Redis.}
+  spec.description = %q{Adds out-of-the-box namespaced and nested Redis keys for ActiveRecord objects.}
   spec.license     = "MIT"
 
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]

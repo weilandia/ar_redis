@@ -1,5 +1,6 @@
-require_relative "support/model"
+require "rspec"
 require "ar_redis"
+require_relative "support/model"
 
 begin
   require "pry"
