@@ -8,25 +8,23 @@ module ArRedis
     end
 
     def [](next_key)
-      ArRedis.new("#{key}:#{next_key}", redis_client)
-    end
-
-    def destroy
-      keys = redis_client.keys("#{self}:*")
-
-      unless keys.blank
-        redis_client.del(keys)
-      end
-    end
-
-    private
-
-    def to_s
-      key
+      ArRedis::Base.new("#{key}:#{next_key}")
     end
 
     def call(command, *arguments)
       redis_client.call(command, key, *arguments)
+    end
+
+    def delete_all
+      keys = redis_client.keys("#{self}:*")
+
+      unless keys.blank?
+        redis_client.del(keys)
+      end
+    end
+
+    def to_s
+      key
     end
   end
 end

@@ -1,4 +1,8 @@
+require "redis"
+require "active_support"
+require "ar_redis/version"
 require "ar_redis/base"
+require "ar_redis/active_record_ext"
 
 module ArRedis
   extend self
@@ -13,5 +17,3 @@ module ArRedis
     @redis = server
   end
 end
-
-binding.pry
