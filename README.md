@@ -1,4 +1,5 @@
 # ArRedis
+
 ArRedis allows you to easily create and remove nested, namespaced Redis keys under ActiveRecord objects and classes. The functionality is inspired by [this RailsConf presentation](https://www.youtube.com/watch?v=dH6VYRMRQFw) by Obie Fernandez.  Also, [Nest](https://github.com/soveran/nest) is a similar gem that does not hook into ActiveRecord.
 
 ## Installation
